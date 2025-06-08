@@ -1,0 +1,24 @@
+/kantin_kampus/
+│
+├── /assets/               # Berisi file CSS, JS, gambar, dll.
+│   ├── /css/
+│   ├── /js/
+│   └── /images/
+│
+├── /config/               # File konfigurasi untuk koneksi database dan pengaturan lainnya
+│  
+│
+├── /includes/             # File PHP untuk fungsi umum, header, footer, dll
+│   
+│
+├── /tests/                # Folder untuk pengujian blackbox, whitebox, greybox
+│   ├── blackbox_test.php  # Pengujian blackbox
+│   ├── whitebox_test.php  # Pengujian whitebox
+│   └── greybox_test.php   # Pengujian greybox
+│
+├── /public/               # Halaman-halaman yang dapat diakses publik
+│ 
+│
+├── /admin/                # Halaman untuk admin kantin
+
+
