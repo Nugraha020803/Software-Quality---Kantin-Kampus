@@ -1,0 +1,557 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header .title h1 {
+    margin: 0;
+}
+
+/* Navbar styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Aside Styling */
+aside {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 0 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styling for menu in aside */
+aside ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+aside ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+aside ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+aside ul li a:hover {
+    background-color: #f39c12;
+}
+
+/* Submenu Styling */
+aside ul li ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+aside ul li ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+aside ul li ul li a {
+    padding: 8px;
+    background-color: #34495e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+aside ul li ul li a:hover {
+    background-color: #e67e22;
+}
+
+/* Section Styling */
+section {
+    margin-left: 270px; /* Memberikan ruang untuk aside */
+    padding: 15px;
+    width: calc(100% - 270px); /* Membuat section menyesuaikan ukuran */
+    transition: margin-left 0.3s ease;
+}
+
+/* Footer Styling */
+footer {
+    color: #2c3e50;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    aside {
+        width: 200px; /* Lebar aside lebih kecil di perangkat mobile */
+    }
+
+    section {
+        margin-left: 0; /* Hilangkan margin-left di perangkat mobile */
+        width: 100%; /* Section menggunakan 100% lebar */
+    }
+
+    aside ul li {
+        font-size: 1rem;
+    }
+
+    aside ul li a {
+        padding: 8px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header .title h1 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsif untuk perangkat sangat kecil */
+@media (max-width: 480px) {
+    aside {
+        display: none; /* Menyembunyikan aside pada layar kecil */
+    }
+
+    section {
+        margin-left: 0; /* Memberikan ruang penuh di layar kecil */
+        width: 100%;
+    }
+}
+/* Card Container Styling */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Menjamin card tidak keluar dari container */
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 30px;  /* Tambah padding agar isi card lebih luas */
+    text-align: center;
+    width: 100%;  /* Pastikan card mengisi penuh kolom */
+    max-width: 350px; /* Maksimal lebar card */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Card Title Styling */
+.card-title {
+    font-size: 2rem; /* Ukuran font title lebih besar */
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Card Text Styling */
+.card-text {
+    font-size: 1.4rem; /* Ukuran font teks lebih besar */
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Responsif: Menyesuaikan card pada perangkat kecil */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-4 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        max-width: 100%; /* Memastikan card mengisi ruang penuh */
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tabel Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk header tabel */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Styling untuk header tabel */
+th {
+    color: black;
+    font-size: 1.1rem;
+}
+
+/* Styling untuk baris tabel */
+tr:hover {
+    background-color: #f1f1f1; /* Memberikan warna latar belakang saat hover */
+}
+
+
+
+/* Responsif: Membuat tabel scrollable pada perangkat kecil */
+@media (max-width: 768px) {
+    table {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Styling untuk link aksi "Lihat Detail" */
+td a {
+    background-color: #3498db; /* Warna latar belakang biru */
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+td a:hover {
+    background-color: #2980b9;
+}
+
+/* Styling untuk tombol tambah pesanan */
+#addOrderBtn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addOrderBtn:hover {
+    background-color: #e67e22;
+}
+
+/* Modal Styling */
+.modal-orders {
+    display: none; /* Modal disembunyikan secara default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Background gelap */
+}
+
+/* Modal Content Styling */
+.modal-orders-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Menyediakan ukuran maksimal untuk modal */
+}
+
+/* Close Button Styling */
+.modal-orders-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-orders-close:hover,
+.modal-orders-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Styling untuk link aksi "Selesai" */
+a[href*="status=completed"] {
+    color: white;
+    background-color: #28a745; /* Hijau untuk selesai */
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect untuk "Selesai" */
+a[href*="status=completed"]:hover {
+    background-color: #218838; /* Hijau lebih gelap saat hover */
+}
+
+/* Styling untuk link aksi "Batal" */
+a[href*="status=cancelled"] {
+    color: white;
+    background-color: #6c757d; /* Abu-abu untuk batal */
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect untuk "Batal" */
+a[href*="status=cancelled"]:hover {
+    background-color: #5a6268; /* Abu-abu lebih gelap saat hover */
+}
+
+/* Modal styling untuk modal-menu */
+.modal-menu {
+    display: none; /* Modal disembunyikan secara default */
+    position: fixed; /* Tetap pada tempatnya */
+    z-index: 1; /* Letakkan modal di atas konten */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Latar belakang transparan gelap */
+}
+
+/* Konten Modal-menu */
+.modal-menu-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 8px;
+}
+
+/* Tombol close untuk modal-menu */
+.modal-menu-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-menu-close:hover,
+.modal-menu-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling untuk form input di dalam modal-menu */
+.modal-menu-content input,
+.modal-menu-content textarea,
+.modal-menu-content button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Styling untuk tombol submit di dalam modal-menu */
+.modal-menu-content button {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-menu-content button:hover {
+    background-color: #34495e;
+}
+
+/* Responsif: Menyesuaikan modal-menu pada layar kecil */
+@media (max-width: 768px) {
+    .modal-menu-content {
+        width: 80%;
+    }
+}
+.btn-primary {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+}
+
+/* Styling untuk tombol Edit */
+a[href*="edit_menu.php"] {
+    background-color: #ffc107; /* Kuning untuk Edit */
+    color: black;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect untuk tombol Edit */
+a[href*="edit_menu.php"]:hover {
+    background-color: #e0a800; /* Kuning lebih gelap saat hover */
+}
+
+/* Styling untuk tombol Hapus */
+a[href*="delete_menu.php"] {
+    background-color: #dc3545; /* Merah untuk Hapus */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect untuk tombol Hapus */
+a[href*="delete_menu.php"]:hover {
+    background-color: #c82333; /* Merah lebih gelap saat hover */
+}
+
+
+
+/* Form input dan textarea */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Tombol submit */
+form button {
+    width: 100%;
+    background-color: #f39c12;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Tombol submit hover */
+form button:hover {
+    background-color: #e67e22;
+}
+
+
+
+/* Style untuk input disabled */
+form input[disabled], form textarea[disabled] {
+    background-color: #f7f7f7;
+    cursor: not-allowed;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form input,
+    form textarea {
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+}
